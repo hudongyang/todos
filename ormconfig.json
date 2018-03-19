@@ -1,0 +1,16 @@
+{
+    "type": "mysql",
+    "host": "191.101.14.14",
+    "port": 3306,
+    "username": "hudongyang",
+    "password": "0340408117",
+    "database": "todo",
+    "synchronize": false,
+    "logging": true,
+    "entities": [
+       "dist/entity/**/*.js"
+    ],
+    "cli": {
+        "entitiesDir": "dist/entity"
+    }
+}
