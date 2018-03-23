@@ -1,16 +1,16 @@
-import {Column, Entity, PrimaryColumn} from 'typeorm'
+import {Column, Entity, PrimaryColumn, PrimaryGeneratedColumn} from 'typeorm'
 import { BaseEntity } from 'typeorm/repository/BaseEntity';
 
 @Entity({
     name: 'todos'
 })
-export default class Todo extends BaseEntity {
-    @PrimaryColumn()
+export default abstract class Todo extends BaseEntity {
+    @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
-    completed: boolean;
+    completed?: boolean;
 
     @Column()
-    title: string;
+    title?: string;
 }
